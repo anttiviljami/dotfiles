@@ -1,0 +1,17 @@
+# Custom aliases
+
+alias ll='ls -FGlAp'
+alias wpscan='ruby ~/wpscan/wpscan.rb'
+alias composer='composer.phar'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias mkdir='mkdir -pv'
+alias less='less -FSRXc'
+alias cd..='cd ../'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+alias .6='cd ../../../../../../'
+alias ~="cd ~" 
