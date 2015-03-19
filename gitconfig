@@ -1,5 +1,3 @@
-[init]
-  templatedir = ~/.git_template
 [push]
   default = current
 [color]
@@ -31,3 +29,7 @@
   prune = true
 [include]
   path = ~/.gitconfig.local
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
