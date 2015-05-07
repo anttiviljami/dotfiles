@@ -33,3 +33,6 @@
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
 	required = true
+[user]
+	name = Antti Kuosmanen
+	email = antti@seravo.fi

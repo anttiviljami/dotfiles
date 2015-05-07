@@ -10,7 +10,11 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" Force startup language as english
+" Pathogen
+execute pathogen#infect()
+filetype plugin indent on
+
+" force startup to default locale
 language C
 
 " allow backspacing over everything in insert mode

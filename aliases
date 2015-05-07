@@ -1,8 +1,6 @@
 # Custom aliases
 
 alias ll='ls -FGlAp'
-alias wpscan='ruby ~/wpscan/wpscan.rb'
-alias composer='composer.phar'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
