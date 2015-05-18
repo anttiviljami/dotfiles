@@ -11,7 +11,8 @@
 set nocompatible
 
 " Pathogen
-execute pathogen#infect()
+" execute pathogen#infect()
+
 filetype plugin indent on
 
 " force startup to default locale
