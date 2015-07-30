@@ -93,6 +93,9 @@ endif
 " Proper tab size
 set tabstop=2 shiftwidth=2 expandtab " Tabs are 2 spaces!
 
+" No trailing whitespaces
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Display options
 set number		" Add line numbers.
 set encoding=utf-8 	" Default Character encoding is UTF-8
