@@ -1,5 +1,5 @@
 # Custom prompt
-export PS1="\s:\[\033[36m\]\w\[\033[m\]\$ "
+export PS1="\u@\h:\[\033[36m\]\w\[\033[m\]\$ "
 
 # Editor
 export EDITOR='vim'
@@ -21,3 +21,6 @@ HISTCONTROL=ignoredups:ignorespace
 
 # Go away, cows
 export ANSIBLE_NOCOWS=1
+
+# Show git branch in prompt
+. ~/.bashrc.git

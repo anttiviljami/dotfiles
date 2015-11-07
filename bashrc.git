@@ -1,0 +1,103 @@
+# $HOME/.bashrc.git -- Additional Git features for Bash promtp
+#
+#
+#   Copyright
+#
+#       Copyright (C) 2005-2013 Jari Aalto
+#       Copyright (C) 2015 Otto Kekäläinen
+#
+#   License
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; either version 2 of the License, or
+#       (at your option) any later version.
+#
+#       This program is distributed in the hope that it will be useful,
+#       but WITHOUT ANY WARRANTY; without even the implied warranty of
+#       MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#       GNU General Public License for more details.
+#
+#       You should have received a copy of the GNU General Public License
+#       along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+#   INSTALLATION
+#
+# 1. Save this file with a name shown at first line.
+#
+#	2. Make sure $HOME/.bash_profile contains following line:
+#
+#		[ -f ~/.bashrc ] && . ~/.bashrc
+#
+#	3. Add to $HOME/.bashrc line:
+#
+#		. ~/.bashrc.git
+#
+#	5. Log out and log in to the account for changes to take in effect.
+#
+#   DESCRIPTION
+#
+#	Prepend the shell prompt to show basic Git repository information:
+#
+#	    ([<indicators>:]branch) $PS1
+#
+#	Indicators:
+#
+#	    B	Bare repository
+#	    R	Rebase in progress
+#
+#   NOTES
+#
+#       This configuration should work in any POSIX compliant shell which
+#       allows modifying the PS1 (promtp) environment variable.
+
+_git_ps1 ()
+{
+    # OR: git rev-parse --is-inside-work-tree
+    local git=$(git rev-parse --git-dir 2> /dev/null)
+
+    [ "$git" ] || return		# Exit unless at git repository
+
+    local branch
+    local bare
+
+    if [ "true" = "$(git rev-parse --is-inside-git-dir 2>/dev/null)" ]
+    then
+        if [ "true" = "$(git rev-parse --is-bare-repository 2>/dev/null)" ]
+	      then
+            bare="B"
+        fi
+    else
+	      branch=$(git symbolic-ref HEAD 2> /dev/null | sed 's,.*heads/,,')
+    fi
+
+    local rebase
+
+    if [ -d $git/rebase-apply ] || [ -d $git/rebase-merge ]
+    then
+       rebase="R"
+    fi
+
+    local ind="$bare$rebase"
+
+    [ "$ind" ] && ind="$ind:"		# Add colon is has content
+
+    local str				# Collect displayed information
+
+    if [ "$branch" ]; then
+       str="($ind$branch) "
+    else
+	      # (no branch)
+	      branch=$(git branch |
+        awk '/[*]/ { sub("..", ""); gsub("[()]", ""); print; exit}')
+        str="($ind$branch) "
+    fi
+
+    [ "$str" ] && echo "$str"
+}
+
+PS1='\e[33;1m$(_git_ps1)\e[0m'$PS1
+
+
+# End of file
+
