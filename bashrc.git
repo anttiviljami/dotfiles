@@ -96,7 +96,7 @@ _git_ps1 ()
     [ "$str" ] && echo "$str"
 }
 
-PS1='\e[33;1m$(_git_ps1)\e[0m'$PS1
+PS1='\[\033[32m\]$(_git_ps1)\[\033[m\]'$PS1
 
 
 # End of file
