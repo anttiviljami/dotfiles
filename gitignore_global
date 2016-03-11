@@ -1,0 +1,6 @@
+##
+# This file is used in all git repos globally
+##
+
+# Do not EVER put OS-X auto generated shit in git
+.DS_Store
