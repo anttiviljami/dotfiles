@@ -19,7 +19,7 @@
   st = status
   up = !git fetch origin && git rebase origin/master
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile = /Users/antti/.gitignore_global
   autocrlf = input
 [merge]
   ff = only
@@ -28,9 +28,11 @@
 [include]
   path = ~/.gitconfig.local
 [filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
+  clean = git hawser clean %f
+  smudge = git hawser smudge %f
+  required = true
 [user]
-	name = Antti Kuosmanen
-	email = antti@seravo.fi
+  name = Antti Kuosmanen
+  email = antti@seravo.fi
+[comparison]
+  heuristic = 1
