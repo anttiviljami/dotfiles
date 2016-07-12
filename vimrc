@@ -11,7 +11,7 @@
 set nocompatible
 
 " Pathogen
-# execute pathogen#infect()
+" execute pathogen#infect()
 
 filetype plugin indent on
 
@@ -58,6 +58,7 @@ autocmd InsertLeave * call ToggleRelativeOn()
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
   syntax on
+  colorscheme vc
   set hlsearch
 endif
 
@@ -120,3 +121,12 @@ set pastetoggle=<F2>
 
 " Proper tab size
 set tabstop=2 shiftwidth=2 expandtab " Tabs are 2 spaces!
+
+" PHPDoc
+nnoremap <C-y> :call PhpDocSingle()<CR>
+
+" OS X Crontabs are silly
+if $VIM_CRONTAB == "true"
+  set nobackup
+  set nowritebackup
+endif
