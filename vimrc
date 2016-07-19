@@ -2,16 +2,21 @@
 " anttiviljami's vimrc
 "
 " twitter: @anttiviljami
-" http://seravo.fi
-"
+" https://github.com/anttiviljami
 ""
+
+" defaults for vim-template
+" https://github.com/aperezdc/vim-template
+let g:username = "Antti Kuosmanen"
+let g:email = "antti@seravo.fi"
+let g:license = "GPLv3"
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
 " Pathogen
-" execute pathogen#infect()
+"execute pathogen#infect()
 
 filetype plugin indent on
 
