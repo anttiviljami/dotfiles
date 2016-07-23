@@ -1,3 +1,5 @@
 .DS_Store
 .*~
 .*.swp
+id_dsa
+id_rsa
