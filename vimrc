@@ -63,7 +63,7 @@ autocmd InsertLeave * call ToggleRelativeOn()
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
   syntax on
-  colorscheme vc
+  "colorscheme vc
   set hlsearch
 endif
 
