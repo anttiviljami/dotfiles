@@ -19,7 +19,7 @@
   st = status
   up = !git fetch origin && git rebase origin/master
 [core]
-  excludesfile = /Users/antti/.gitignore_global
+	excludesfile = ~/.gitignore_global
   autocrlf = input
 [merge]
   ff = only
@@ -32,7 +32,7 @@
   smudge = git hawser smudge %f
   required = true
 [user]
-  name = Antti Kuosmanen
-  email = antti@seravo.fi
+	name = Viljami Kuosmanen
+	email = viljami@avoinsorsa.fi
 [comparison]
   heuristic = 1
