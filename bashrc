@@ -1,5 +1,6 @@
 # Custom prompt
-export PS1="\u@\h:\[\033[36m\]\w\[\033[m\]\$ "
+#export PS1="\u@\h:\[\033[36m\]\w\[\033[m\]\$ "
+export PS1="viljami@work:\[\033[36m\]\w\[\033[m\]\$ "
 
 # Editor
 export EDITOR='vim'
@@ -16,7 +17,7 @@ HISTSIZE=1000000 # big big history
 HISTFILESIZE=1000000 # big big history
 shopt -s histappend # append to history, don't overwrite
 shopt -s histverify # verify when using history
-PROMPT_COMMAND="history -a; history -c; history -r;$PROMPT_COMMAND"
+#PROMPT_COMMAND="history -a; history -c; history -r;$PROMPT_COMMAND"
 HISTCONTROL=ignoredups:ignorespace
 
 shopt -s checkwinsize # auto window size
@@ -42,3 +43,27 @@ fi
 
 # Show git branch in prompt
 . ~/.bashrc.git
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/akuo/.nvm/versions/node/v10.3.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /Users/akuo/.nvm/versions/node/v10.3.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/akuo/.nvm/versions/node/v10.3.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /Users/akuo/.nvm/versions/node/v10.3.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /Users/akuo/openapi-backend/examples/serverless-aws/node_modules/tabtab/.completions/slss.bash ] && . /Users/akuo/openapi-backend/examples/serverless-aws/node_modules/tabtab/.completions/slss.bash
+
+# use nuget with mono
+alias nuget="mono /usr/local/bin/nuget.exe"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Add .local/bin
+export PATH="$PATH:$HOME/.local/bin"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
