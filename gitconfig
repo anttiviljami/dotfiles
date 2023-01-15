@@ -32,7 +32,14 @@
   smudge = git hawser smudge %f
   required = true
 [user]
-	name = Viljami Kuosmanen
-	email = viljami@avoinsorsa.fi
+	name = Viljami
+	email = viljami@viljami.io
+	signingkey = BAD30743AD50F3C8
 [comparison]
   heuristic = 1
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
