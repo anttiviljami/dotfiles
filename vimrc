@@ -7,9 +7,9 @@
 
 " defaults for vim-template
 " https://github.com/aperezdc/vim-template
-let g:username = "Antti Kuosmanen"
-let g:email = "antti@seravo.fi"
-let g:license = "GPLv3"
+let g:username = "Viljami Kuosmanen"
+let g:email = "viljami@viljami.io"
+let g:license = "MIT"
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.

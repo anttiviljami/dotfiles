@@ -33,8 +33,8 @@
   required = true
 [user]
 	name = Viljami
-	email = viljami@viljami.io
-	signingkey = BAD30743AD50F3C8
+	email = v.kuosmanen@epilot.cloud
+	signingkey = 3E2F4E2250B9AB86
 [comparison]
   heuristic = 1
 [pull]
@@ -43,3 +43,11 @@
 	defaultBranch = main
 [commit]
 	gpgsign = true
+
+[includeIf "gitdir:~/epilot/"]
+  path = .gitconfig-epilot
+
+[includeIf "gitdir:~/personal/"]
+  path = .gitconfig-personal
+[safe]
+	directory = ~/epilot/auth-monorepo
