@@ -32,7 +32,7 @@
   smudge = git hawser smudge %f
   required = true
 [user]
-	name = Viljami
+	name = Viljami Kuosmanen
 	email = v.kuosmanen@epilot.cloud
 	signingkey = 3E2F4E2250B9AB86
 [comparison]

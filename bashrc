@@ -63,6 +63,7 @@ export PATH="$PATH:$HOME/.local/bin"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+
 # run GPG in terminal
 export GPG_TTY=$(tty)
 
@@ -71,7 +72,7 @@ export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
 
 # pnpm
-export PNPM_HOME="~/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -86,3 +87,11 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # echo "$GLAB_PAT" | docker login registry.gitlab.com -u viljami.io --password-stdin
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+# python
+export PATH="/opt/homebrew/opt/python@3.14/libexec/bin:$PATH"
+
+# silence mac os zsh warn
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+
