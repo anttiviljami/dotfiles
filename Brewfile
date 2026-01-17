@@ -15,8 +15,6 @@ brew "biome"
 brew "cairo"
 # Cross-platform make
 brew "cmake"
-# OpenAI's coding agent that runs in your terminal
-brew "codex", link: false
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 # GNU Transport Layer Security (TLS) Library
@@ -47,10 +45,6 @@ brew "libpq", link: true
 brew "librsvg"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Open-source, cross-platform JavaScript runtime environment
-brew "node"
-# Manage multiple Node.js versions
-brew "nvm"
 # Development kit for the Java programming language
 brew "openjdk"
 # Development kit for the Java programming language
@@ -87,6 +81,8 @@ cask "leapp"
 cask "miniconda"
 # Control your tools with a few keystrokes
 cask "raycast"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 vscode "42crunch.vscode-openapi"
 vscode "4ops.terraform"
 vscode "amazonwebservices.aws-toolkit-vscode"
