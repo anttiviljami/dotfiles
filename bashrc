@@ -69,7 +69,8 @@ export GPG_TTY=$(tty)
 
 # prefer gnu sed
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-
+# prefer gnu tar
+export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"

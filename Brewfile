@@ -24,6 +24,8 @@ brew "gdk-pixbuf"
 brew "giflib"
 # Open-source GitLab command-line tool
 brew "glab"
+# GNU implementation of tar
+brew "gnu-tar"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
 # Validating, recursive, caching DNS resolver
